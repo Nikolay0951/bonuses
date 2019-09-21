@@ -1,11 +1,17 @@
 console.log('worked');
 
 const purchaseAmount = 1000;
-const bonuses = 900;
+const availableBonuses = 100;
 
-let total = purchaseAmount - bonuses;
-if (total < 0) {
-total = 0;
-}
+const maxBonuses = purchaseAmount * 0.5;
+let applieBonuses;
+if (maxBonuses <= availableBonuses) {
+    applieBonuses = maxBonuses;
+} else {
+    applieBonuses =availableBonuses;
+} 
+
+console.log(applieBonuses)
+const total = purchaseAmount - applieBonuses;
 
 console.log(total);
