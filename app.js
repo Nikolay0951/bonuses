@@ -3,11 +3,9 @@ console.log('worked');
 const purchaseAmount = 1000;
 const bonuses = 900;
 
-let total = 0;
-if (purchaseAmount <= bonuses){
-    const total = 0;
-    } else {
-       
-total = purchaseAmount - bonuses;
-    }
+let total = purchaseAmount - bonuses;
+if (total < 0) {
+total = 0;
+}
+
 console.log(total);
